@@ -94,4 +94,37 @@ module tb_simple;
 endmodule
 
 OUTPUT - 
+![Image](https://github.com/user-attachments/assets/b121c32d-3233-475b-ad40-6655ce359ad6)
+![Image](https://github.com/user-attachments/assets/8a326a01-170f-4816-bca0-fbe42d881160)
 
+
+1. IF – Instruction Fetch
+What happens:
+The CPU fetches the instruction from instruction memory using the Program Counter (PC).
+After fetching, PC is incremented to point to the next instruction.
+Hardware Used:
+Program Counter
+Instruction Memory
+
+ 2. ID – Instruction Decode
+What happens:
+The instruction is decoded to understand what operation is to be performed (ADD, SUB, LOAD).
+The required register values are read (e.g., R1, R2).
+Control signals are generated.
+Hardware Used:
+Instruction Decoder
+Register File
+
+ 3. EX – Execute
+What happens:
+The ALU performs the operation (ADD, SUB, etc.).
+For LOAD/STORE, the address is calculated (though in this simple version, we use a mock LOAD value).
+Hardware Used:
+ALU (Arithmetic Logic Unit)
+
+4. WB – Write Back
+What happens:
+The result from EX stage is written back to the register file.
+For example, ADD result is written to R0.
+Hardware Used:
+Register File
