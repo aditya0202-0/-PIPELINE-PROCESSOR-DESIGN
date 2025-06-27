@@ -93,4 +93,5 @@ module tb_simple;
   end
 endmodule
 
+OUTPUT - 
 
